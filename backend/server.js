@@ -25,9 +25,26 @@ const setupRoutes = require("./routes/setup.routes");
 const app = express();
 const server = http.createServer(app);
 
+const clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
+const allowedOrigins = String(clientUrl)
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error(`CORS policy blocked: ${origin}`));
+    }
+  },
+  credentials: true,
+};
+
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: allowedOrigins,
     credentials: true,
   },
 });
@@ -35,12 +52,7 @@ const io = new Server(server, {
 initSocket(io);
 app.set("io", io);
 
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
-    credentials: true,
-  })
-);
+app.use(cors(corsOptions));
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
 
