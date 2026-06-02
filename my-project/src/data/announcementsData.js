@@ -1,0 +1,108 @@
+const announcementsData = [
+  {
+    id: 1,
+    title: "2026 Second Semester Timetable Released",
+    content:
+      "The official second semester timetable for all BSc Nursing students is now available. Please download it from the Modules page under Timetables. Report any clashes to your class representative or the faculty office within one week.",
+    category: "Academic",
+    author: "Faculty Office",
+    date: "2026-05-28",
+    pinned: true,
+    urgent: false,
+    fileUrl: "/timetables/2026%20SECOND%20SEMESTER%20TIMETABLE-NU-SoNM-(Final).pdf",
+    fileName: "2026-Second-Semester-Timetable.pdf",
+  },
+  {
+    id: 2,
+    title: "Clinical Posting Applications Open",
+    content:
+      "Applications for hospital clinical postings are now open for Year 2 and Year 3 students. Log in with your student ID, choose your preferred hospital, and submit before the deadline. Placement letters will be issued after admin approval.",
+    category: "Clinical",
+    author: "Clinical Coordinator",
+    date: "2026-05-25",
+    pinned: true,
+    urgent: true,
+    fileUrl: null,
+    fileName: null,
+  },
+  {
+    id: 3,
+    title: "Public Lecture on ENT — All Students Invited",
+    content:
+      "The School of Nursing and Midwifery hosted a public lecture on Ear, Nose and Throat (ENT) nursing care. All students are encouraged to review ENT module materials and attend follow-up tutorials scheduled for next week.",
+    category: "Events",
+    author: "School of Nursing & Midwifery",
+    date: "2026-05-20",
+    pinned: false,
+    urgent: false,
+    fileUrl: null,
+    fileName: null,
+  },
+  {
+    id: 4,
+    title: "Mid-Semester Examination Schedule",
+    content:
+      "Mid-semester examinations will run from 15–26 June 2026. Students must arrive 30 minutes early with their student ID and approved uniform. The full examination timetable will be posted on the notice board and uploaded here next week.",
+    category: "Academic",
+    author: "Examination Office",
+    date: "2026-05-18",
+    pinned: false,
+    urgent: true,
+    fileUrl: null,
+    fileName: null,
+  },
+  {
+    id: 5,
+    title: "Nurses Association General Meeting",
+    content:
+      "All association members are invited to the monthly general meeting on Friday at 2:00 PM in the main lecture hall. Agenda: executive reports, welfare updates, and clinical posting feedback. Class representatives must attend.",
+    category: "General",
+    author: "NUNAP Executive",
+    date: "2026-05-15",
+    pinned: false,
+    urgent: false,
+    fileUrl: null,
+    fileName: null,
+  },
+  {
+    id: 6,
+    title: "New Study Modules Uploaded",
+    content:
+      "Lecture notes for Anatomy, Medical-Surgical Nursing, Community Health, and other Year 2 modules are now available for download on the Modules page. Ensure you have the latest versions before clinical rotations begin.",
+    category: "Academic",
+    author: "Faculty Office",
+    date: "2026-05-10",
+    pinned: false,
+    urgent: false,
+    fileUrl: null,
+    fileName: null,
+  },
+  {
+    id: 7,
+    title: "Hospital Orientation — Connaught & PCMH",
+    content:
+      "Mandatory orientation for students assigned to Connaught Hospital and PCMH will take place on campus. Bring your placement letter, white uniform, and clinical handbook. Absence without approval may affect your posting grade.",
+    category: "Clinical",
+    author: "Clinical Supervisor",
+    date: "2026-05-08",
+    pinned: false,
+    urgent: false,
+    fileUrl: null,
+    fileName: null,
+  },
+  {
+    id: 8,
+    title: "World Nurses Day Celebration",
+    content:
+      "Join the Nurses Association in celebrating International Nurses Day. There will be a procession, health talk, and awards for outstanding student nurses. Wear full uniform and meet at the main gate by 8:00 AM.",
+    category: "Events",
+    author: "NUNAP PRO",
+    date: "2026-05-05",
+    pinned: false,
+    urgent: false,
+    fileUrl: null,
+    fileName: null,
+  },
+];
+
+export default announcementsData;
