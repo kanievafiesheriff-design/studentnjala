@@ -1,0 +1,10 @@
+services:
+  - type: static_site
+    name: njala-frontend
+    env: static
+    branch: main
+    buildCommand: cd my-project && npm install && npm run build
+    publishPath: my-project/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://studentnjala3.onrender.com/api
