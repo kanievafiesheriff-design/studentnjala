@@ -69,6 +69,7 @@ app.use("/api/setup", setupRoutes);
 
 app.use(errorHandler);
 
+
 const normalizePort = (val) => {
   const port = parseInt(val, 10);
   if (Number.isNaN(port)) return val;
@@ -76,7 +77,7 @@ const normalizePort = (val) => {
   return false;
 };
 
-const PORT = normalizePort(process.env.PORT || "5000");
+const PORT = normalizePort(process.env.PORT || "10000");
 
 const onError = (error) => {
   if (error.syscall !== "listen") {
@@ -103,9 +104,9 @@ server.on("error", onError);
 connectDB()
   .then(async () => {
     await ensureAdmin();
-    server.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-      console.log(`API: http://localhost:${PORT}/api`);
+    server.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on 0.0.0.0:${PORT}`);
+      console.log(`API: http://0.0.0.0:${PORT}/api`);
       console.log(`Chat (Socket.io) enabled`);
     });
   })
