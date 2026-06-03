@@ -25,7 +25,7 @@ const setupRoutes = require("./routes/setup.routes");
 const app = express();
 const server = http.createServer(app);
 
-const clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
+const clientUrl = process.env.CLIENT_URL || "http://localhost:3000,https://studentnjalabackend.onrender.com";
 const allowedOrigins = String(clientUrl)
   .split(",")
   .map((origin) => origin.trim())
