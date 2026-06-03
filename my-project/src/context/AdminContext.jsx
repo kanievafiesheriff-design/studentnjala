@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import { getAdminSession, saveAdminSession, clearAdminSession } from "../utils/adminAuth";
 import { clearToken } from "../services/api";
 import { authAPI, saveToken } from "../services/api";
+const url = "https://studentnjalabackend.onrender.com";
 
 const AdminContext = createContext(null);
 

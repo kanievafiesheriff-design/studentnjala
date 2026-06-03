@@ -25,7 +25,7 @@ const setupRoutes = require("./routes/setup.routes");
 const app = express();
 const server = http.createServer(app);
 
-const clientUrl = process.env.CLIENT_URL || "http://localhost:3000,https://studentnjalabackend.onrender.com";
+const clientUrl = process.env.CLIENT_URL || "https://studentnjalabackend.onrender.com";
 const allowedOrigins = String(clientUrl)
   .split(",")
   .map((origin) => origin.trim())
@@ -93,7 +93,7 @@ const normalizePort = (val) => {
   return false;
 };
 
-const PORT = normalizePort(process.env.PORT || "10000");
+const PORT = normalizePort(process.env.PORT || "5000");
 
 const onError = (error) => {
   if (error.syscall !== "listen") {
