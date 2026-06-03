@@ -4,6 +4,7 @@ import { authAPI, applicationsAPI, saveToken, clearToken } from "../services/api
 import { mapApplication } from "../utils/downloadHelpers";
 import { disconnectSocket } from "../services/socket";
 
+const url = "https://studentnjalabackend.onrender.com";
 const StudentContext = createContext(null);
 
 function mapUserToStudent(user) {
